@@ -225,7 +225,7 @@ li {
 }
 
 #hero p {
-    font-family: 'Caveat', cursive;
+    font-family: 'Itim', cursive;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 50px;
@@ -357,10 +357,10 @@ section {
 
 
 /*--------------------------------------------------------------
-# Skills
+# Education
 --------------------------------------------------------------*/
 
-.skills h4 {
+.education h4 {
     font-weight: 700;
     font-size: 22px;
     color: #173b6c;
@@ -369,7 +369,7 @@ section {
     margin-left: 15px;
 }
 
-.skills .skills-item p i {
+.education .education-item p i {
     font-size: 20px;
     padding-bottom: 10px;
     padding-right: 2px;
@@ -383,10 +383,10 @@ section {
 
 
 /*--------------------------------------------------------------
-# Resume
+# Experience
 --------------------------------------------------------------*/
 
-.resume .resume-item {
+.experience .experience-item {
     padding: 0 0 20px 20px;
     margin-top: 0px;
     margin-left: 15px;
@@ -394,7 +394,7 @@ section {
     position: relative;
 }
 
-.resume .resume-item h4 {
+.experience .experience-item h4 {
     line-height: 18px;
     font-size: 18px;
     font-weight: 700;
@@ -403,13 +403,13 @@ section {
     margin-bottom: 10px;
 }
 
-.resume .resume-item p a {
+.experience .experience-item p a {
     font-size: 17px;
     font-style: bold;
     font-weight: 550;
 }
 
-.resume .resume-item p b {
+.experience .experience-item p b {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -418,19 +418,19 @@ section {
     position: relative;
 }
 
-.resume .resume-item ul {
+.experience .experience-item ul {
     padding-left: 20px;
 }
 
-.resume .resume-item ul li {
+.experience .experience-item ul li {
     padding-bottom: 10px;
 }
 
-.resume .resume-item:last-child {
+.experience .experience-item:last-child {
     padding-bottom: 0;
 }
 
-.resume .resume-item::before {
+.experience .experience-item::before {
     content: "";
     position: absolute;
     width: 16px;
@@ -442,7 +442,7 @@ section {
     border: 3px solid #45abff;
 }
 
-.resume h5 {
+.experience h5 {
     font-size: 18px;
     background: #e4edf9;
     padding: 5px 5px;
