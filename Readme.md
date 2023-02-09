@@ -1,2 +1,3 @@
-This is my first HTML file which had been created after self-studying on W3.School about:  
-HTML, CSS & Javascript -> Bootstrap4
+Đây là CV xin việc mới nhất của tôi.
+Truy cập link để biết thêm chi tiết:
+https://anbetuananh.github.io/
