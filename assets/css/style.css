@@ -215,7 +215,7 @@ li {
   }
 
   #hero h1 {
-    font-family: "Nunito", sans-serif;
+    font-family: var(--hero-font-h1), sans-serif;
     font-size: 80px;
     font-weight: 700;
     line-height: 56px;
@@ -224,7 +224,7 @@ li {
   }
 
   #hero p {
-    font-family: "Itim", cursive;
+    font-family: var(--hero-font-p), cursive;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 50px;
@@ -848,6 +848,23 @@ li {
     font-size: var(--h1_font_size);
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  .about .content h3 {
+    font-weight: 500;
+    font-size: 5px;
+    font-style: italic;
+    padding-bottom: 5px;
+    color: #173b6c;
+    margin-left: 10px;
+  }
+
+  .about .content img {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    display: block;
+    margin-right: 50px;
   }
 }
 
