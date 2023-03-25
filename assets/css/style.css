@@ -4,7 +4,7 @@
   --main-font: "Noto Serif";
   --hero-font-h1: "Nunito";
   --hero-font-p: "Itim";
-  --h1_font_size: 28px;
+  --h1_font_size: 30px;
   --h2_font_size: 18px;
 }
 
@@ -90,7 +90,7 @@ li {
   }
 
   #header .profile h1 {
-    font-size: 30px;
+    font-size: var(--h1_font_size);
     margin: 0;
     padding: 0;
     font-weight: 600;
@@ -840,19 +840,237 @@ li {
 
 /* các quy tắc CSS cho thiết bị di động ở đây */
 @media only screen and (max-width: 600px) {
+  /*--------------------------------------------------------------
+    # Hero Section
+    --------------------------------------------------------------*/
+
+  #hero {
+    width: 100%;
+    height: 38vh;
+    background: url("../img/hero.jpg") center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* #hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  } */
+
+  #hero .hero-container {
+    position: relative;
+    z-index: 3;
+    min-width: 260px;
+  }
+
   #hero h1 {
-    font-size: var(--h1_font_size);
-    line-height: 36px;
+    font-family: var(--hero-font-h1), sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 25px;
+    margin: 0 0 5px 0;
+    color: #fff;
   }
-  #hero h2 {
-    font-size: var(--h1_font_size);
-    line-height: 24px;
-    margin-bottom: 30px;
+
+  #hero p {
+    font-family: var(--hero-font-p), cursive;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: #fff;
   }
+
+  #hero p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+  }
+
+  /*--------------------------------------------------------------
+    # Header
+    --------------------------------------------------------------*/
+
+  #header {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /* width: 260px; */
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #040b14;
+    overflow-y: auto;
+    border-right: 2px solid #040b14;
+  }
+
+  #header .profile img {
+    display: block;
+    margin: 15px auto;
+    width: 80px;
+    border: 2px solid #2c2f3f;
+  }
+
+  #header .profile img:hover {
+    border: 2px solid #149ddd;
+  }
+
+  #header .profile h1 {
+    font-size: var(--h1_font_size);
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    -moz-text-align-last: center;
+    text-align-last: center;
+  }
+
+  #header .profile h1 a {
+    color: rgb(167, 167, 167);
+    text-decoration: none;
+  }
+
+  #header .profile h1 a:hover {
+    color: #149ddd;
+    text-decoration: none;
+  }
+
+  #header .profile .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #212431;
+    color: #fff;
+    line-height: 2;
+    padding: 4px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+  }
+
+  #header .profile .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 10px 0;
+  }
+
+  /*--------------------------------------------------------------
+        # Navigation Menu
+        --------------------------------------------------------------*/
+
+  .nav-menu {
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+
+  .nav-menu * {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+  }
+
+  .nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .nav-menu a {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 5px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 18px;
+  }
+
+  .nav-menu a i {
+    font-size: 25px;
+    padding-right: 8px;
+    color: #6f7180;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu .active > a,
+  .nav-menu li:hover > a {
+    text-decoration: none;
+    color: #149ddd;
+    font-weight: 700;
+    padding-left: 40px;
+  }
+
+  .nav-menu a:hover i,
+  .nav-menu .active > a i,
+  .nav-menu li:hover > a i {
+    color: #149ddd;
+  }
+
+  /*--------------------------------------------------------------
+    # Sections General
+    --------------------------------------------------------------*/
+
+  section {
+    padding: 5px 0;
+    overflow: hidden;
+  }
+
+  .section-background {
+    background: #6496ec;
+  }
+
+  .section-title {
+    padding-top: -10px;
+    padding-bottom: 5px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #173b6c;
+    left: 10px;
+  }
+
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 5px;
+    background: #dd1414;
+    bottom: 0;
+    left: 5px;
+  }
+
+  .section-title p {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  /*--------------------------------------------------------------
+    # About
+    --------------------------------------------------------------*/
 
   .about .content h3 {
     font-weight: 500;
-    font-size: 5px;
+    font-size: 16px;
     font-style: italic;
     padding-bottom: 5px;
     color: #173b6c;
@@ -861,10 +1079,363 @@ li {
 
   .about .content img {
     position: relative;
-    width: 50px;
-    height: 100px;
-    display: block;
-    margin-right: 50px;
+    right: 130px;
+    width: 110px;
+    height: 150px;
+    display: inline-block;
+  }
+
+  .about .item ul {
+    list-style: none;
+    padding-bottom: 10px;
+  }
+
+  .about .item ul li {
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .about .item ul i {
+    font-size: 18px;
+    padding-bottom: 10px;
+    color: #149ddd;
+  }
+
+  .about .item ul b {
+    font-size: 18px;
+    padding-bottom: 10px;
+    color: #e924f0;
+  }
+
+  /*--------------------------------------------------------------
+    # Education
+    --------------------------------------------------------------*/
+
+  .education h4 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #173b6c;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-left: 15px;
+  }
+
+  .education .education-item p i {
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-right: 2px;
+    color: #149ddd;
+    margin-left: 10px;
+  }
+
+  .skill .iconfont {
+    padding-left: 5px;
+  }
+
+  /*--------------------------------------------------------------
+    # Experience
+    --------------------------------------------------------------*/
+
+  .experience .experience-item {
+    padding: 0 0 20px 20px;
+    margin-top: 0px;
+    margin-left: 15px;
+    border-left: 4px solid #1f5297;
+    position: relative;
+  }
+
+  .experience .experience-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #050d18;
+    margin-bottom: 10px;
+  }
+
+  .experience .experience-item p a {
+    font-size: 17px;
+    font-style: bold;
+    font-weight: 550;
+  }
+
+  .experience .experience-item p b {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: -2px;
+    border-bottom: 2px solid #ffae00;
+    position: relative;
+  }
+
+  .experience .experience-item ul {
+    padding-left: 20px;
+  }
+
+  .experience .experience-item ul li {
+    padding-bottom: 10px;
+  }
+
+  .experience .experience-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .experience .experience-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 120px;
+    left: -10px;
+    top: 0;
+    background: rgb(28, 145, 255);
+    border: 3px solid #45abff;
+  }
+
+  .experience h5 {
+    font-size: 18px;
+    background: #e4edf9;
+    padding: 5px 5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  /*--------------------------------------------------------------
+    # Achieve
+    --------------------------------------------------------------*/
+
+  .achieve .title {
+    margin-left: 100px;
+    margin-bottom: 15px;
+  }
+
+  .achieve .title a {
+    color: #343a40;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .achieve .title a:hover {
+    color: #149ddd;
+  }
+
+  .achieve .title b {
+    color: #343a40;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .achieve .title b:hover {
+    color: #149ddd;
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  .achieve .icon-box {
+    margin-bottom: 20px;
+  }
+
+  .achieve .icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: #149ddd;
+    border-radius: 50%;
+    transition: 0.5s;
+    border: 1px solid #149ddd;
+    margin-left: 25px;
+  }
+
+  .achieve .icon i {
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .achieve .icon-box:hover .icon {
+    background: #fff;
+  }
+
+  .achieve .icon-box:hover .icon i {
+    color: #149ddd;
+  }
+
+  /*--------------------------------------------------------------
+        # Interest
+        --------------------------------------------------------------*/
+
+  .interest .interest-item {
+    margin-bottom: 30px;
+  }
+
+  .interest .interest-item p i {
+    padding-bottom: 10px;
+  }
+
+  .interest .interest-item p i {
+    font-size: 22px;
+    padding-right: 5px;
+    color: #149ddd;
+  }
+
+  /*--------------------------------------------------------------
+        # Contact
+        --------------------------------------------------------------*/
+
+  .contact {
+    padding-bottom: 110px;
+  }
+
+  .contact .info {
+    padding: 10px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .contact .info i {
+    font-size: 15px;
+    color: #149ddd;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #dff3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #050d18;
+  }
+
+  .contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: #173b6c;
+  }
+
+  .contact .info .email p {
+    padding-top: 0px;
+  }
+
+  .contact .info .social-links {
+    padding-left: 60px;
+  }
+
+  .contact .info .blog a {
+    font-weight: 900;
+    padding-left: 15px;
+  }
+
+  .contact .info .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+    margin-right: 10px;
+  }
+
+  .contact .info .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+  }
+
+  .contact .info .email:hover i,
+  .contact .info .address:hover i,
+  .contact .info .phone:hover i,
+  .contact .info .zalo:hover i,
+  .contact .info .blog:hover i {
+    background: #149ddd;
+    color: #fff;
+  }
+
+  /*--------------------------------------------------------------
+        # Footer
+    --------------------------------------------------------------*/
+
+  #footer {
+    padding: 5px;
+    color: #f4f6fd;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 50px;
+    z-index: 9999;
+    background: #040b14;
+    border-top: 2px solid #040b14;
+    border-right: 2px solid #040b14;
+  }
+
+  .footer-bg1 a {
+    color: #040b14;
+  }
+
+  .footer-bg2 a {
+    color: #fff;
+  }
+
+  #footer .copyright {
+    text-align: center;
+  }
+
+  #footer .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #eaebf0;
+  }
+
+  /*--------------------------------------------------------------
+    # back-to-top button
+    --------------------------------------------------------------*/
+
+  .back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    right: 15px;
+    bottom: 15px;
+    background: #149ddd;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+  }
+
+  .back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 7px;
+    left: 8px;
+  }
+
+  .back-to-top:hover {
+    color: #fff;
+    background: #2eafec;
+    transition: background 0.2s ease-in-out;
   }
 }
 
