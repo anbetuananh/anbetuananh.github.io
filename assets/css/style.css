@@ -55,13 +55,13 @@ li {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    /* padding-right: 0px 15px; */
   }
   #hero {
     background-attachment: relative;
   }
 
-  /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     # Header
     --------------------------------------------------------------*/
 
@@ -135,7 +135,7 @@ li {
     padding: 10px 0;
   }
 
-  /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     # Hero Section
     --------------------------------------------------------------*/
 
@@ -186,10 +186,9 @@ li {
     color: #fff;
     padding-bottom: 4px;
     letter-spacing: 1px;
-    /* border-bottom: 3px solid #149ddd; */
   }
 
-  /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     # About
     --------------------------------------------------------------*/
 
@@ -233,9 +232,43 @@ li {
     color: #e924f0;
   }
 
-  /* .about .content img:hover {
-        transform: scaleX(-1);
-    } */
+    /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+
+  #footer {
+    padding: 5px;
+    color: #f4f6fd;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    height: 50px;
+    z-index: 9999;
+    background: #040b14;
+    border-top: 2px solid #040b14;
+    border-right: 2px solid #040b14;
+  }
+
+  .footer-bg1 a {
+    color: #040b14;
+  }
+
+  .footer-bg2 a {
+    color: #fff;
+  }
+
+  #footer .copyright {
+    text-align: center;
+  }
+
+  #footer .credits {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: #eaebf0;
+  }
 }
 
 /*==================================================================================================
@@ -243,16 +276,14 @@ li {
 /*=================================================================================================*/
 
 @media only screen and (max-width: 600px) {
-  /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     # Header
     --------------------------------------------------------------*/
 
   #header {
-    /* position: fixed; */
     top: 0;
     left: 0;
     bottom: 0;
-    /* width: 260px; */
     transition: all ease-in-out 0.5s;
     z-index: 9997;
     transition: all 0.5s;
@@ -317,7 +348,7 @@ li {
     padding: 10px 0;
   }
 
-  /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     # Hero Section
     --------------------------------------------------------------*/
 
@@ -370,7 +401,7 @@ li {
     letter-spacing: 1px;
   }
 
-  /*--------------------------------------------------------------
+    /*--------------------------------------------------------------
     # About
     --------------------------------------------------------------*/
 
@@ -413,17 +444,18 @@ li {
     padding-bottom: 10px;
     color: #e924f0;
   }
-  /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
 
   #footer {
     padding: 5px;
     color: #f4f6fd;
     font-size: 14px;
     left: 0;
-    bottom: 00;
-    width: 260px;
+    bottom: 0;
+    width: 400px;
     height: 50px;
     z-index: 9999;
     background: #040b14;
@@ -432,7 +464,6 @@ li {
 
     position: fixed;
     right: 5px;
-    bottom: 60px;
     transition: display 0.5s ease-in-out;
     z-index: 99999;
   }
@@ -827,44 +858,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-
-#footer {
-  padding: 5px;
-  color: #f4f6fd;
-  font-size: 14px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 260px;
-  height: 50px;
-  z-index: 9999;
-  background: #040b14;
-  border-top: 2px solid #040b14;
-  border-right: 2px solid #040b14;
-}
-
-.footer-bg1 a {
-  color: #040b14;
-}
-
-.footer-bg2 a {
-  color: #fff;
-}
-
-#footer .copyright {
-  text-align: center;
-}
-
-#footer .credits {
-  padding-top: 5px;
-  text-align: center;
-  font-size: 13px;
-  color: #eaebf0;
-}
-
-/*--------------------------------------------------------------
 # Tootip
 --------------------------------------------------------------*/
 
@@ -932,7 +925,6 @@ section {
 }
 
 /* Close Button */
-
 .close {
   color: #aaaaaa;
   float: right;
@@ -980,7 +972,7 @@ section {
   height: 40px;
   border-radius: 50px;
   right: 5px;
-  bottom: 60px;
+  bottom: 5px;
   background: #149ddd;
   color: #fff;
   transition: display 0.5s ease-in-out;
